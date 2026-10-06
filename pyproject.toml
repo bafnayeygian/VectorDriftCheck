@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vectordriftcheck"
+version = "1.0.0"
+description = "Compare embedding snapshots and report cosine-similarity, vector-norm, missing-ID, and representation drift across model or pipeline changes."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "VectorDriftCheck contributors"}]
+
+[project.scripts]
+vector-drift-check = "vector_drift_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/VectorDriftCheck"
+Issues = "https://github.com/bafnayeygian/VectorDriftCheck/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
